@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# connect to server using a special identity file
+# to store private key
+ssh -i ~/.ssh/school ubuntu@54.87.169.213
