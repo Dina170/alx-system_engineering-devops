@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Configures a server to run nginx and listen on port 80 but script must be 5 lines long or less
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+pkill -o nginx
