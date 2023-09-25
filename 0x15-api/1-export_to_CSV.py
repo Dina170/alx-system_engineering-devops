@@ -9,7 +9,7 @@ if __name__ == "__main__":
     ename = requests.get(url + "users/{}".format(argv[1])).json().get('name')
     todos = requests.get(url + "todos", params={"userId": argv[1]}).json()
 
-    with open('USER_ID.csv', 'w') as csvfile:
+    with open('{}.csv'.format(argv[1]), 'w') as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for todo in todos:
             writer.writerow([argv[1], ename,
